@@ -1,0 +1,14 @@
+<group name="local_rules">
+  <rule id="100010" level="10" frequency="5" timeframe="60">
+    <if_matched_sid>60122</if_matched_sid>
+    <description>Wykryto 5 nieudanych logowań (EventID 4625) w ciągu 60s — możliwy brute-force</description>
+    <group>authentication_failed,brute_force</group>
+  </rule>
+</group>
+<group name="local_rules">
+  <rule id="100010" level="7">
+    <if_matched_sid>60122</if_matched_sid>
+    <description>Nieudane logowanie</description>
+    <group>authentication_failed</group>
+  </rule>
+</group>
